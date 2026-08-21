@@ -171,14 +171,9 @@ button:focus-visible {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
+  background: var(--cream);
   border-bottom: 1px solid transparent;
   transition: border-color 300ms var(--ease), box-shadow 300ms var(--ease);
-}
-.site-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--cream);
 }
 .site-header.is-scrolled {
   border-bottom-color: var(--taupe-soft);
@@ -664,6 +659,30 @@ section { padding: var(--space-xl) 0; }
 }
 .share-btn:hover { border-color: var(--cognac); color: var(--espresso); }
 .share-btn svg { width: 15px; height: 15px; }
+
+/* ---------- floating whatsapp button ---------- */
+.whatsapp-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 95;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 26px -8px rgba(33,26,19,0.45);
+  transition: transform 220ms var(--ease), box-shadow 220ms var(--ease);
+}
+.whatsapp-fab:hover { transform: scale(1.08); box-shadow: 0 14px 32px -8px rgba(33,26,19,0.55); }
+.whatsapp-fab svg { width: 30px; height: 30px; fill: #fff; }
+
+@media (max-width: 780px) {
+  /* the sticky bottom bar already covers this on small screens */
+  .whatsapp-fab { display: none; }
+}
 
 /* ---------- reveal on scroll ---------- */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 700ms var(--ease), transform 700ms var(--ease); }
