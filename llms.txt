@@ -1,0 +1,10 @@
+# Lobo Velas y Objetos
+
+> Emprendimiento argentino de velas y objetos deco hechos a mano. Cera vegetal, pabilo de madera, piezas únicas y pedidos personalizados. Envíos a todo el país.
+
+## Contacto
+- WhatsApp: https://wa.me/5491162351551
+- Instagram: https://instagram.com/lobo.objetosyvelas
+
+## Sobre el sitio
+Landing de una sola página (index.html) con catálogo de productos, información sobre pedidos personalizados, envíos y preguntas frecuentes. No hay local físico: la venta es por DM/WhatsApp con envíos a todo el país.
