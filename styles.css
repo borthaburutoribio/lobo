@@ -197,7 +197,7 @@ button:focus-visible {
   font-size: 1.4rem;
   letter-spacing: 0.06em;
 }
-.brand img { height: 42px; width: 42px; }
+.brand img { height: 42px; width: 42px; object-fit: contain; }
 
 .main-nav {
   display: flex;
