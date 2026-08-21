@@ -171,11 +171,19 @@ button:focus-visible {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
+  border-bottom: 1px solid transparent;
+  transition: border-color 300ms var(--ease), box-shadow 300ms var(--ease);
+}
+/* frosted background lives on a pseudo-element, not on .site-header itself —
+   backdrop-filter/transform/filter on an ancestor makes it the containing
+   block for position:fixed descendants, which broke the mobile nav overlay */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: rgba(251, 247, 241, 0.85);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid transparent;
-  transition: border-color 300ms var(--ease), box-shadow 300ms var(--ease);
 }
 .site-header.is-scrolled {
   border-bottom-color: var(--taupe-soft);
