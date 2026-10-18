@@ -1,10 +1,10 @@
 # Lobo Velas y Objetos
 
-> Emprendimiento argentino de velas y objetos deco hechos a mano. Cera vegetal, pabilo de madera, piezas únicas y pedidos personalizados. Envíos a todo el país.
+> Emprendimiento argentino de Maca: velas en blend de cera de soja y abeja con pabilo de madera, objetos de microcemento y resina epoxi, souvenirs, deco para eventos y regalos empresariales. Venta por menor y por mayor, todos los medios de pago y envíos a todo el país. Pedidos personalizados en 5 a 7 días.
 
 ## Contacto
 - WhatsApp: https://wa.me/5491162351551
 - Instagram: https://instagram.com/lobo.objetosyvelas
 
 ## Sobre el sitio
-Landing de una sola página (index.html) con catálogo de productos, información sobre pedidos personalizados, envíos y preguntas frecuentes. No hay local físico: la venta es por DM/WhatsApp con envíos a todo el país.
+Landing de una sola página (index.html): qué hace Lobo, galería de piezas, tienda con catálogo y precios (el pedido se arma en la web y se envía por WhatsApp), pedidos personalizados, historia de Maca, preguntas frecuentes y envíos. No hay local físico.
