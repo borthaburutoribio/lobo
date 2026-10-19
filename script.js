@@ -134,7 +134,13 @@ document.querySelectorAll('.faq-item').forEach(item => {
       const inCart = cart.find(l => l.key === key);
       const li = document.createElement('li');
       li.className = 'menu-item';
+      const thumb = item.foto
+        ? `<button class="menu-thumb" data-foto="${item.foto}" data-alt="${item.alt || item.nombre}" data-nombre="${item.nombre}" aria-label="Ver foto de ${item.nombre}">
+             <img src="assets/img/${item.foto}" alt="${item.alt || item.nombre}" loading="lazy" width="96" height="120">
+           </button>`
+        : `<span class="menu-thumb is-empty" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c1.6 2.4 3 4.3 3 6.6a3 3 0 1 1-6 0C9 7.3 10.4 5.4 12 3Z"/><path d="M7 21h10M9 14h6v7H9z"/></svg></span>`;
       li.innerHTML = `
+        ${thumb}
         <div class="menu-info">
           <h4>${item.nombre}${item.nuevo ? ' <span class="menu-new">Nuevo</span>' : ''}</h4>
           <p>${item.detalle || ''}</p>
@@ -149,7 +155,23 @@ document.querySelectorAll('.faq-item').forEach(item => {
     menu.appendChild(ul);
   }
 
+  /* foto ampliada */
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightboxImg');
+  if (lightbox) {
+    document.getElementById('lightboxClose').addEventListener('click', () => lightbox.close());
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.close(); });
+  }
+
   menu.addEventListener('click', e => {
+    const th = e.target.closest('.menu-thumb[data-foto]');
+    if (th && lightbox) {
+      lbImg.src = 'assets/img/' + th.dataset.foto;
+      lbImg.alt = th.dataset.alt;
+      document.getElementById('lightboxCaption').textContent = th.dataset.nombre;
+      lightbox.showModal();
+      return;
+    }
     const btn = e.target.closest('.menu-add');
     if (!btn) return;
     const line = cart.find(l => l.key === btn.dataset.key);
